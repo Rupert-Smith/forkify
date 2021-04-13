@@ -121,6 +121,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('This is the new feature');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes); //load the MAIN RECIPE and add the 'selected' class to the corresponding recipe. Search results are NOT loaded
@@ -129,7 +133,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults); // when enter key is hit on search element, render the search results (not the main recipe, just the left panel)
   paginationView.addHandlerClick(controlPagination); // search page buttons. On click, change
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('Welcome');
+  newFeature();
 };
 init();
 
