@@ -16,7 +16,6 @@ export const state = {
 
 const createRecipeObject = function (data) {
   const { recipe } = data.data;
-  console.log(recipe);
   return {
     id: recipe.id,
     title: recipe.title,
@@ -39,7 +38,7 @@ export const loadRecipe = async function (id) {
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
   } catch (err) {
-    console.error(`GAY ASASSSSSSSSSSSSSSSSSSSSSSS${err}`);
+    console.error(`💥💥💥💥${err}`);
     throw err;
   }
 };
@@ -62,7 +61,7 @@ export const loadSearchResults = async function (query) {
     });
     state.search.page = 1;
   } catch (err) {
-    console.error(`GAY ASASSSSSSSSSSSSSSSSSSSSSSS${err}`);
+    console.error(`💥💥💥💥${err}`);
     throw err;
   }
 };
@@ -132,7 +131,7 @@ export const uploadRecipe = async function (newRecipe) {
         const ingArr = ing[1].split(',').map(element => element.trim());
         if (ingArr.length !== 3)
           throw new Error(
-            'Wrong ingredient format. Please use the correct format dickhead'
+            'Wrong ingredient format. Please use the correct format'
           );
         const [quantity, unit, description] = ingArr;
         return { quantity: quantity ? +quantity : null, unit, description };

@@ -4,7 +4,7 @@ import icons from 'url:../../img/icons.svg';
 
 class ResultsView extends View {
   _parentElement = document.querySelector('.results');
-  _errorMessage = 'No recipes found dickhead, please try again';
+  _errorMessage = 'No recipes found, please try again';
   _successMessage = '';
 
   _generateMarkup() {

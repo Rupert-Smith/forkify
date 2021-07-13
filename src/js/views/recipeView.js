@@ -8,8 +8,7 @@ import { Fraction } from 'fractional'; //taken from the 'fractional' module that
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
-  _errorMessage =
-    'Could not find the recipe. Please choose another one dickhead';
+  _errorMessage = 'Could not find the recipe. Please choose another one';
   _successMessage = '';
 
   addHandlerRender(handler) {
